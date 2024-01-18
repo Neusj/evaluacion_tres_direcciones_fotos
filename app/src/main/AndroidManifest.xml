@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        tools:ignore="CoarseFineLocation" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Evaluacion_tres"
+        tools:targetApi="31">
+        <activity
+            android:name=".fotos.ShowPhotosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fotos.TakePhotoActivity"
+            android:exported="false"
+            android:label="@string/title_activity_take_photo"
+            android:theme="@style/Theme.Evaluacion_tres" />
+        <activity
+            android:name=".fotos.PhotosActivity"
+            android:exported="false"
+            android:label="@string/title_activity_photos"
+            android:theme="@style/Theme.Evaluacion_tres" />
+        <activity
+            android:name=".direcciones.DirectionsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_direcciones"
+            android:theme="@style/Theme.Evaluacion_tres" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Evaluacion_tres">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
